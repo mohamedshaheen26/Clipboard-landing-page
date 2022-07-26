@@ -309,7 +309,7 @@ main .landing p {
 .footer {
   margin-top: 100px;
   background-color: var(--footer-bk);
-  padding: 40px 0;
+  padding-top: 40px;
 }
 .footer .container {
   display: flex;
