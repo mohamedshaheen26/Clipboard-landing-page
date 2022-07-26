@@ -78,6 +78,17 @@ body {
   background-color: #5f71f9;
 }
 
+@media (max-width: 425px) {
+  .btn {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btn button {
+    margin-bottom: 20px;
+  }
+}
 /***************************************************************/
 .special-heading {
   padding: 0 100px;
@@ -88,23 +99,26 @@ body {
 
 .special-heading .content {
   text-align: center;
-  width: 625px;
+  width: 60%;
   max-width: 100%;
 }
 
-.special-heading h2 {
+.special-heading .content h2 {
   color: #4c545d;
-  font-size: 30px;
+  font-size: 40px;
 }
 
-.special-heading p {
+.special-heading .content p {
   color: #9fabb2;
-  font-size: 16px;
+  font-size: 19px;
   line-height: 1.5;
 }
 @media (max-width: 768px) {
   .special-heading {
     padding: 20px 30px;
+  }
+  .special-heading .content {
+    width: 100%;
   }
 }
 @media (max-width: 425px) {
@@ -114,6 +128,7 @@ body {
 }
 /********************** Start Header **************************/
 header {
+  height: 100vh;
   padding: 100px 0;
   display: flex;
   justify-content: center;
@@ -125,24 +140,25 @@ header {
 
 header .intro-text {
   text-align: center;
-  width: 625px;
+  width: 50%;
   max-width: 100%;
 }
 
-header .intro-text img {
-  width: 80px;
-}
-
 header .intro-text h1 {
-  font-size: 40px;
+  font-size: 45px;
   color: #4c545d;
 }
 
 header .intro-text p {
   line-height: 1.5;
   margin-bottom: 40px;
-  font-size: 18px;
+  font-size: 19px;
   color: #9fabb2;
+}
+@media (max-width:1024px) {
+  header {
+    height: auto;
+  }
 }
 
 @media (max-width: 425px) {
@@ -153,6 +169,7 @@ header .intro-text p {
   }
 
   header .intro-text {
+    width: 100%;
     padding: 0 25px;
   }
 
@@ -163,20 +180,12 @@ header .intro-text p {
   header .intro-text p {
     font-size: 14px;
   }
-
-  .btn {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .btn button {
-    margin-bottom: 20px;
-  }
 }
 /********************** End Header **************************/
 
 /********************** Start Landing **************************/
-main {
+main .landing {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 70px 0;
@@ -184,34 +193,34 @@ main {
 
 main img {
   width: 50%;
-  margin-left: -25px;
+  margin-left: -30px;
 }
 
-main .content {
+main .landing .content {
   width: 45%;
   height: 490px;
 }
 
-main .content div {
+main .landing .content div {
   width: 60%;
 }
 
-main .content div:not(:first-child) {
+main .landing div:not(:first-child) {
   margin-top: 60px;
 }
 
-main .content h3 {
+main .landing h3 {
   color: #4c545d;
 }
 
-main .content p {
+main .landing p {
   color: #9fabb2;
   line-height: 1.5;
   font-size: 18px;
 }
 
 @media (max-width: 768px) {
-  main {
+  main .landing {
     flex-direction: column;
   }
 
@@ -220,13 +229,13 @@ main .content p {
     margin: 0;
   }
 
-  main .content {
+  main .landing .content {
     margin-top: 35px;
     width: 80%;
     text-align: center;
   }
 
-  main .content div {
+  main .landing .content div {
     width: 100%;
   }
 }
@@ -336,7 +345,7 @@ main .content p {
 }
 
 .footer .container .links ul li a:hover {
-    color: #1cb39d;
+  color: #1cb39d;
 }
 
 .footer .container .social-icons {
@@ -345,13 +354,13 @@ main .content p {
 }
 
 .footer .container .social-icons i {
-    margin-left: 20px;
-    font-size: 30px;
+  margin-left: 20px;
+  font-size: 30px;
 }
 
 .footer .container .social-icons i:hover {
-    color: var(--secondary-color);
-    cursor: pointer;
+  color: var(--secondary-color);
+  cursor: pointer;
 }
 
 @media (max-width: 425px) {
@@ -369,8 +378,8 @@ main .content p {
     text-align: center;
   }
 
-    .footer .container .links ul {
-        padding: 0;
-    }
+  .footer .container .links ul {
+    padding: 0;
+  }
 }
 /********************** End Footer **************************/
