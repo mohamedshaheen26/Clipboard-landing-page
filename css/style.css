@@ -128,7 +128,6 @@ body {
 }
 /********************** Start Header **************************/
 header {
-  height: 100vh;
   padding: 100px 0;
   display: flex;
   justify-content: center;
@@ -154,11 +153,6 @@ header .intro-text p {
   margin-bottom: 40px;
   font-size: 19px;
   color: #9fabb2;
-}
-@media (max-width:1024px) {
-  header {
-    height: auto;
-  }
 }
 
 @media (max-width: 425px) {
@@ -191,7 +185,7 @@ main .landing {
   padding: 70px 0;
 }
 
-main img {
+main .landing img {
   width: 50%;
   margin-left: -30px;
 }
@@ -224,8 +218,8 @@ main .landing p {
     flex-direction: column;
   }
 
-  main img {
-    width: 80%;
+  main .landing img {
+    width: 85%;
     margin: 0;
   }
 
@@ -308,8 +302,8 @@ main .landing p {
 /********************** Start Footer **************************/
 .footer {
   margin-top: 100px;
-  background-color: var(--footer-bk);
   padding-top: 40px;
+  background-color: var(--footer-bk);
 }
 .footer .container {
   display: flex;
